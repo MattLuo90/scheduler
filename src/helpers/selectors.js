@@ -16,3 +16,11 @@ export const getInterview = (state, interview) => {
     interviewer: bookedInterview
   }
 }
+
+export const getInterviewersForDay = (state, day) => {
+  let filteredInterviewers = state.days.filter(time => time.name === day)
+  if (filteredInterviewers.length === 0 || state.days.length === 0) {
+    return [];
+  }
+  return filteredInterviewers[0].interviewers.map(id => state.interviewers[id]);
+};
