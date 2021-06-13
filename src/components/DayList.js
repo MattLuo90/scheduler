@@ -3,6 +3,7 @@ import DayListItem from 'components/DayListItem'
 
 export default function DayList(props) {
   const lists = props.days.map((item) => {
+    console.log("check item", item)
     return (
     <DayListItem 
     key={item.id}
