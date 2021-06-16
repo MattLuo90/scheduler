@@ -5,8 +5,8 @@
 
 ## Final Product
 
-!["main page of interview Scheduler"](https://github.com/MattLuo90/tweeter/blob/master/docs/tweeter%20for%20smallscreen.jpg?raw=true)
-!["book form of interview Scheduler"](https://github.com/MattLuo90/tweeter/blob/master/docs/tweeter%20for%20widescreen.jpg?raw=true)
+!["main page of interview Scheduler"](https://github.com/MattLuo90/scheduler/blob/master/docs/book%20form.jpg?raw=true)
+!["book form of interview Scheduler"](https://github.com/MattLuo90/scheduler/blob/master/docs/main-page.jpg?raw=true)
 
 ## Dependencies
 
