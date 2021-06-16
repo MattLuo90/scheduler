@@ -78,10 +78,10 @@ describe("Appointment", () => {
     );
 
     expect(getByText(day, "2 spots remaining")).toBeInTheDocument();
-    
+
   });
 
-  it("loads data, edits an interview and keeps the spots remaining for Monday the same",async () => {
+  it("loads data, edits an interview and keeps the spots remaining for Monday the same", async () => {
     // 1. Render the Application.
     const { container, debug } = render(<Application />);
     // 2. Wait until the text "Archie Cohen" is displayed.
@@ -110,7 +110,7 @@ describe("Appointment", () => {
     axios.put.mockRejectedValueOnce();
   });
 
-  it("shows the save error when failing to save an appointment", async() => {
+  it("shows the save error when failing to save an appointment", async () => {
     //1. receive error msg from axios.put
     axios.put.mockRejectedValueOnce();
     //2. render the application
@@ -141,16 +141,16 @@ describe("Appointment", () => {
     expect(getByText(container, "Archie Cohen")).toBeInTheDocument();
 
     const day = getAllByTestId(container, "day").find(day =>
-        queryByText(day, "Monday")
-      );
+      queryByText(day, "Monday")
+    );
 
     expect(getByText(day, "1 spot remaining")).toBeInTheDocument();
 
   })
 
   it("shows the delete error when failing to delete an existing appointment", async () => {
-     //1. receive error msg from axios.put
-     axios.delete.mockRejectedValueOnce();
+    //1. receive error msg from axios.put
+    axios.delete.mockRejectedValueOnce();
     // 2. Render the Application.
     const { container, debug } = render(<Application />);
 
@@ -184,6 +184,6 @@ describe("Appointment", () => {
 
     expect(getByText(day, "1 spot remaining")).toBeInTheDocument();
   });
-  
+
 
 })
